@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Informações Pessoais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-label>Nome & Idade</ion-label>
+    <ion-input type="text" placeholder="Digite o nome" [(ngModel)] = "nome"></ion-input>
+    <!-- <ion-label>Idade</ion-label> -->
+    <ion-input type="number" placeholder="Digite a idade" [(ngModel)] = "idade"></ion-input>
+    <ion-label>Peso & Altura</ion-label>
+    <ion-input type="number" placeholder="Digite seu Peso" [(ngModel)] = "peso"></ion-input>
+    <!-- <ion-label>Altura</ion-label> -->
+    <ion-input type="number" placeholder="Digite sua Altura" [(ngModel)] = "altura"></ion-input>
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select placeholder="Selecione" [(ngModel)]="sexo">
+        <ion-select-option value="f">Feminino</ion-select-option>
+        <ion-select-option value="m">Masculino</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button (click)="enviar()" expand="block" shape="round">
+      Enviar
+    </ion-button>
+</ion-content>
+ 
